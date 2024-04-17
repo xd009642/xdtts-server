@@ -8,12 +8,18 @@ use serde::{Deserialize, Serialize};
 use std::io::Cursor;
 use std::path::Path;
 use std::sync::Arc;
-use tracing::{error, info};
+use tracing::error;
 use xd_tts::{XdTts, WAV_SPEC};
 
 #[derive(Clone)]
 pub struct TtsContext {
     tts: Arc<XdTts>,
+}
+
+impl Default for TtsContext {
+    fn default() -> Self {
+        Self::new()
+    }
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -24,7 +30,7 @@ pub struct Generate {
 impl TtsContext {
     pub fn new() -> Self {
         Self {
-            tts: XdTts::new(&Path::new("./app/models"), false)
+            tts: XdTts::new(Path::new("./app/models"), false)
                 .unwrap()
                 .into(),
         }
