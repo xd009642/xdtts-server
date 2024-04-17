@@ -1853,9 +1853,9 @@ checksum = "de3145af08024dea9fa9914f381a17b8fc6034dfb00f3a84013f7ff43f29ed4c"
 
 [[package]]
 name = "pavex"
-version = "0.1.25"
+version = "0.1.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a671905fec911fe1addd6eec04d58b96ccc2639dc89591cc3c4e87e90118470e"
+checksum = "be0308bbef02b0c872722bace9415f7914200ca5157748122770b9a2ef424d10"
 dependencies = [
  "anyhow",
  "biscotti",
@@ -1894,9 +1894,9 @@ dependencies = [
 
 [[package]]
 name = "pavex_bp_schema"
-version = "0.1.25"
+version = "0.1.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0bbbcbb1b3b3b9727d4f065c6379a3443afac47ad4c7f5cfa956678d587e0078"
+checksum = "c25d26931c421c2c544cf37762edc23d480890a67ea5edd3d1d9e04d0a4e140e"
 dependencies = [
  "pavex_reflection",
  "serde",
@@ -1915,9 +1915,9 @@ dependencies = [
 
 [[package]]
 name = "pavex_macros"
-version = "0.1.25"
+version = "0.1.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "79317648ebac6846e02cea194d66508ca9d4f286c4a8d26524c817114da17703"
+checksum = "62e11fd9c25b3207d2b53ce584f04e8d5f306a59fe12d60aef5c151afc813f87"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1932,9 +1932,9 @@ checksum = "77b9753b03381fd8856966146c4d626d9a8507901c1bcdfbc41df03deea551fc"
 
 [[package]]
 name = "pavex_reflection"
-version = "0.1.25"
+version = "0.1.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d14309cf2a67c6ac9da08b295f5927593746f46f3363de8b7cda499b7073d16c"
+checksum = "5472f23c47c17a8c0e248f5683224a7a6609ac7b760ac000a63270e12c6e273e"
 dependencies = [
  "serde",
 ]
@@ -1986,9 +1986,9 @@ checksum = "e3148f5046208a5d56bcfc03053e3ca6334e51da8dfb19b6cdc8b306fae3283e"
 
 [[package]]
 name = "persist_if_changed"
-version = "0.1.25"
+version = "0.1.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "32d4d3872652ccc7eea7c46e589ff748062a2299c002d8d973e5659e3dcea22d"
+checksum = "9f328dbaf962aea0af4827edbb4370175078f16fb45b778c8f19949f187e2811"
 dependencies = [
  "anyhow",
  "fs-err",

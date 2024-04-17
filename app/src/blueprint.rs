@@ -1,7 +1,7 @@
 use crate::{configuration, routes, telemetry};
 use pavex::blueprint::Blueprint;
-use pavex::kit::ApiKit;
 use pavex::f;
+use pavex::kit::ApiKit;
 
 /// The main blueprint, containing all the routes, middlewares, constructors and error handlers
 /// required by our API.
