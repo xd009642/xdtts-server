@@ -2671,6 +2671,7 @@ dependencies = [
 name = "server_sdk"
 version = "0.1.0"
 dependencies = [
+ "anyhow",
  "app",
  "http 1.1.0",
  "hyper",

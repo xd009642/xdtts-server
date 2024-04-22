@@ -9,9 +9,27 @@ struct ServerState {
 pub struct ApplicationState {
     s0: app::routes::tts::TtsContext,
 }
-pub async fn build_application_state() -> crate::ApplicationState {
+#[derive(Debug, thiserror::Error)]
+pub enum ApplicationStateError {
+    #[error(transparent)]
+    TtsContextNew(anyhow::Error),
+}
+pub async fn build_application_state() -> Result<
+    crate::ApplicationState,
+    crate::ApplicationStateError,
+> {
     let v0 = app::routes::tts::TtsContext::new();
-    crate::ApplicationState { s0: v0 }
+    let v1 = match v0 {
+        Ok(ok) => ok,
+        Err(v1) => {
+            return {
+                let v2 = crate::ApplicationStateError::TtsContextNew(v1);
+                core::result::Result::Err(v2)
+            };
+        }
+    };
+    let v2 = crate::ApplicationState { s0: v1 };
+    core::result::Result::Ok(v2)
 }
 pub fn run(
     server_builder: pavex::server::Server,

@@ -18,7 +18,7 @@ pub struct TtsContext {
 
 impl Default for TtsContext {
     fn default() -> Self {
-        Self::new()
+        Self::new().unwrap()
     }
 }
 
@@ -28,10 +28,10 @@ pub struct Generate {
 }
 
 impl TtsContext {
-    pub fn new() -> TtsContext {
-        Self {
+    pub fn new() -> anyhow::Result<TtsContext> {
+        Ok(Self {
             tts: XdTts::new(Path::new("./app/models"), false).unwrap().into(),
-        }
+        })
     }
 
     /// Generate audio from a TTS request
