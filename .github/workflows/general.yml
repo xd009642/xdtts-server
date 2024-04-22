@@ -97,16 +97,3 @@ jobs:
       - name: Verify freshness
         run: |
           cargo px verify-freshness
-
-  docker:
-    name: Docker image
-    runs-on: ubuntu-latest
-    if: ${{ github.ref == 'refs/heads/main' }}
-    steps:
-      - uses: actions/checkout@v3
-      - uses: docker/setup-buildx-action@v3
-      - uses: docker/build-push-action@v5
-        with:
-          context: .
-          cache-from: type=gha
-          cache-to: type=gha,mode=max

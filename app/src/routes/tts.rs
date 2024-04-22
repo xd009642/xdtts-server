@@ -28,11 +28,9 @@ pub struct Generate {
 }
 
 impl TtsContext {
-    pub fn new() -> Self {
+    pub fn new() -> TtsContext {
         Self {
-            tts: XdTts::new(Path::new("./app/models"), false)
-                .unwrap()
-                .into(),
+            tts: XdTts::new(Path::new("./app/models"), false).unwrap().into(),
         }
     }
 

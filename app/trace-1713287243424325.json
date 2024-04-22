@@ -1,7 +1,0 @@
-[
-{"args":{"name":"main"},"name":"thread_name","ph":"M","pid":1,"tid":0},
-{".file":"/home/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pavex_cli-0.1.25/src/main.rs",".line":249,"args":{"blueprint":"\"/home/daniel/rustnation/xdtts-server/server_sdk/blueprint.ron\"","check":"false","diagnostics":"None","output":"\"/home/daniel/rustnation/xdtts-server/server_sdk\""},"cat":"pavex","name":"Generate server sdk","ph":"B","pid":1,"tid":0,"ts":2660.767},
-{".file":"/home/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pavex_cli-0.1.25/src/package_graph.rs",".line":4,"cat":"pavex_cli::package_graph","name":"compute_package_graph","ph":"B","pid":1,"tid":0,"ts":2676.143},
-{".file":"/home/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pavex_cli-0.1.25/src/package_graph.rs",".line":4,"cat":"pavex_cli::package_graph","name":"compute_package_graph","ph":"E","pid":1,"tid":0,"ts":236535.919},
-{".file":"/home/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pavex_cli-0.1.25/src/main.rs",".line":249,"args":{"blueprint":"\"/home/daniel/rustnation/xdtts-server/server_sdk/blueprint.ron\"","check":"false","diagnostics":"None","output":"\"/home/daniel/rustnation/xdtts-server/server_sdk\""},"cat":"pavex","name":"Generate server sdk","ph":"E","pid":1,"tid":0,"ts":2559248.416}
-]
