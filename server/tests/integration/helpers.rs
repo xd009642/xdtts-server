@@ -55,7 +55,8 @@ impl TestApi {
             if std::env::var("TEST_LOG").is_ok() {
                 let subscriber = tracing_subscriber::fmt::Subscriber::builder()
                     .with_env_filter(
-                        EnvFilter::try_from_default_env().unwrap_or(EnvFilter::new("info")),
+                        EnvFilter::try_from_default_env()
+                            .unwrap_or(EnvFilter::new("info,app=trace")),
                     )
                     .finish();
                 // We don't redirect panic messages to the `tracing` subsystem because
@@ -68,9 +69,10 @@ impl TestApi {
 
 /// Convenient methods for calling the API under test.
 impl TestApi {
-    pub async fn get_ping(&self) -> reqwest::Response {
+    pub async fn tts_generate(&self, text: &str) -> reqwest::Response {
         self.api_client
-            .get(&format!("{}/api/ping", &self.api_address))
+            .post(&format!("{}/api/v1/generate", &self.api_address))
+            .json(&serde_json::json!({"text": text}))
             .send()
             .await
             .expect("Failed to execute request.")

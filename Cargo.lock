@@ -2659,6 +2659,7 @@ dependencies = [
  "pavex_tracing",
  "reqwest",
  "serde",
+ "serde_json",
  "server_sdk",
  "tokio",
  "tracing",
@@ -3657,7 +3658,7 @@ dependencies = [
 [[package]]
 name = "xd-tts"
 version = "0.1.0"
-source = "git+https://github.com/xd009642/xd-tts#f3c8b8c8db128240b57f189e642a07665ea5d7b5"
+source = "git+https://github.com/xd009642/xd-tts#f8e2a5569c136789321e1cad6ed30e99ea54a8e0"
 dependencies = [
  "anyhow",
  "clap",
